@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم التكنولوجيا</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Cairo", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* الهيدر */
+        header {
+            background: #0a3d62;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #dcdcdc;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* قسم مقدمة */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80') center/cover;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #000;
+        }
+
+        /* المحتوى */
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        h2 {
+            color: #0a3d62;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px #bbb;
+        }
+
+        /* الفوتر */
+        footer {
+            background: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        /* زر الصعود لأعلى */
+        #topBtn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #0a3d62;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <h1>عالم التكنولوجيا</h1>
+        <nav>
+            <a href="#about">عن التكنولوجيا</a>
+            <a href="#articles">مقالات</a>
+            <a href="#features">المميزات</a>
+        </nav>
+    </header>
+
+    <!-- مقدمة -->
+    <section class="hero">
+        <h1>مرحباً بك في عالم المستقبل</h1>
+        <p>التكنولوجيا أصبحت جزءاً أساسياً من حياتنا اليومية.</p>
+    </section>
+
+    <!-- المحتوى -->
+    <div class="container">
+
+        <h2 id="about">ما هي التكنولوجيا؟</h2>
+        <p>
+            التكنولوجيا هي استخدام العلم لتطوير أدوات وأنظمة تساعد في تسهيل حياة الإنسان،
+            وتُستخدم اليوم في كافة المجالات مثل الصحة، التعليم، الصناعة، والذكاء الاصطناعي.
+        </p>
+
+        <h2 id="articles">أهم المجالات التكنولوجية</h2>
+        <div class="cards">
+
+            <div class="card">
+                <h3>الذكاء الاصطناعي</h3>
+                <p>تقنيات تسمح للآلات بالتعلم واتخاذ القرارات مثل البشر.</p>
+            </div>
+
+            <div class="card">
+                <h3>الروبوتات</h3>
+                <p>أجهزة تعمل بشكل ذاتي لمساعدة الإنسان في المهام المختلفة.</p>
+            </div>
+
+            <div class="card">
+                <h3>الواقع الافتراضي</h3>
+                <p>عالم رقمي يمكن الدخول إليه بواسطة نظارات VR.</p>
+            </div>
+
+            <div class="card">
+                <h3>الأمن السيبراني</h3>
+                <p>حماية البيانات والشبكات من الهجمات الإلكترونية.</p>
+            </div>
+
+        </div>
+
+        <h2 id="features">لماذا التكنولوجيا مهمة؟</h2>
+        <ul>
+            <li>تسهيل الحياة اليومية.</li>
+            <li>زيادة الإنتاجية والسرعة.</li>
+            <li>تحسين جودة التعليم والتعلم.</li>
+            <li>توفير حلول طبية متقدمة.</li>
+        </ul>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        © 2025 جميع الحقوق محفوظة - موقع التكنولوجيا
+    </footer>
+
+    <!-- زر الصعود لأعلى -->
+    <button id="topBtn">أعلى ↑</button>
+
+    <script>
+        // إظهار وإخفاء زر الصعود لأعلى
+        let btn = document.getElementById("topBtn");
+
+        window.onscroll = function() {
+            if (window.scrollY > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        btn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+
+</body>
+</html>
